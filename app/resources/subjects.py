@@ -1,0 +1,1 @@
+# The resources for the Subjects endpoint

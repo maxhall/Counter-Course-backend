@@ -1,0 +1,7 @@
+# The environment folder
+env
+
+
+# Python executables
+.pyc
+.swp
