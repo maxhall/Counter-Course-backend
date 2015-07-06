@@ -1,1 +1,2 @@
-#optimistically inserting a file to hold the global configuration
+# Global configuration
+# SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/test.db'
