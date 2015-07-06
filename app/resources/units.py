@@ -2,6 +2,7 @@
 
 from flask.ext.restful import Resource, fields, marshal_with
 from app.models import Units, Subjects, Notes
+from app.resources.notes import notes_fields
 
 units_fields = {
     'code': fields.String,
@@ -12,7 +13,7 @@ units_fields = {
     'official_information': fields.String,
     'official_link': fields.String,
     'review': fields.String,
-    'notes': fields.List(fields.String)
+    'notes': fields.Nested(notes_fields)
     }
 
 class UnitsAPI(Resource):

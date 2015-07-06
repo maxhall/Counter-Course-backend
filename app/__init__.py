@@ -15,7 +15,13 @@ from app.models import Units, Subjects, Notes
 db.create_all()
 
 # Put some entries into the database so we have something to look at
-english = Units('ENGL1234', 'Western Theories of Language', 'Nick Riemer', '1', '2015', 'This subject traverses the history of grammar and drags with it a focused eye over the history of intellectual thought', 'http://www.google.com', 'this subjects is sensational in the way that you would want any subject to be-do it', True, '1')
+
+english = Units()
+english.name = 'frank'
+english.code = 'ENGL1234'
+english.coordinator = 'Kanye West'
+english.official_information = 'This is the first thing that you need to know begore you attend the heth the thing thing tihng thing ithng thing thing thing thing'
+english.official_link = 'http://www.google.com'
 db.session.add(english)
 db.session.commit()
 
@@ -30,13 +36,6 @@ def index():
 #    Search Parser
 #    File Upload Parser
 
-# Define the fields returned in the JSON
-
-notes_fields = {
-    'title': fields.String,
-    'author': fields.String,
-    'location': fields.String
-    }
 
 # Import Resources
 

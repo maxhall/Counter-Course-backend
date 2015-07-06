@@ -3,5 +3,5 @@ env
 
 
 # Python executables
-.pyc
-.swp
+*.pyc
+*.swp

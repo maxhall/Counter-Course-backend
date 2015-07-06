@@ -19,18 +19,6 @@ class Units(db.Model):
     # Relationship to the Notes that are intended for this Subject
     notes = db.relationship('Notes', backref='Unit', lazy='dynamic')
 
-    def __init__(self, code, name, coordinator, semester, year, official_information, official_link, review, published, subject):
-	self.code = code
-	self.name = name
-	self.coordinator = coordinator
-	self.semester = semester
-	self.year = year
-	self.official_information = official_information
-	self.official_link = official_link
-	self.review = review
-	self.published = published
-	self.subject = subject
-
 class Subjects(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
@@ -40,12 +28,6 @@ class Subjects(db.Model):
     # Relationship to the Units that comprise the Subject Area
     units = db.relationship('Units', backref='Subject', lazy='dynamic')
 
-    def __init__(self, name, official_link, review, published):
-	self.name = name
-	self.official_link = official_link
-	self.review = review
-	self.published = published
-
 class Notes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80))
@@ -54,12 +36,3 @@ class Notes(db.Model):
     published = db.Column(db.Boolean)
     # Foreign Key of the Unit that the notes are for
     unit = db.Column(db.Integer, db.ForeignKey('units.id'))
-
-    def __init__(self, title, author, location, published, unit):
-	self.title = title
-	self.author = author
-	self.location = location
-	self.published = published
-	self.unit = unit
-
-
