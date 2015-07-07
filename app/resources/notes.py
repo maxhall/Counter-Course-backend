@@ -13,7 +13,19 @@ class NotesAPI(Resource):
 	note = Notes.query.get(id)
 	return note
 
-    def put(self):
+    def post(self):
+#	file = Get the file from the request
+#	if files_allowed(file):
+#	     Give it an appropriate filename that includes something random
+#	     Move the file to the right static folder
+#	note = Notes()
+#	note.title = 'NEW - User submitted title'
+#	note.author = 'User Submitted Name'
+#	note.location = NOTES_STATIC_DIRECTORY + the filename + the suffix
+#	note.published = False
+#	db.session.add(note)
+#	db.session.commit()
+	return {'Success: We did the thing'} 
 
 class NotesListAPI(Resource):
     @marshal_with(notes_fields)

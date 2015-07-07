@@ -1,6 +1,8 @@
 # The environment folder
-env
+env/
 
+# The Static Folder
+static/
 
 # Python executables
 *.pyc
