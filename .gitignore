@@ -7,3 +7,4 @@ static/
 # Python executables
 *.pyc
 *.swp
+app/models.pyc

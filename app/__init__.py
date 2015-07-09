@@ -54,4 +54,4 @@ from app.resources.subjects import SubjectsListAPI
 api.add_resource(UnitsAPI, '/api/units/<int:id>', endpoint='unit')
 api.add_resource(UnitsListAPI, '/api/units/', endpoint='units') 
 api.add_resource(SubjectsAPI, '/api/subjects/<int:id>', endpoint='subject')
-api.add_resource(SubjectsAPI, '/api/subjects/', endpoint='subjects')
+api.add_resource(SubjectsListAPI, '/api/subjects/', endpoint='subjects')

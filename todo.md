@@ -5,6 +5,9 @@
 - Admin stuff
     - Bulk import
     - Publish and unpublish
+    - Allow actual subject names etc to be viewed in the admin panel
+    - Add login security
+    - change the name of the login url
 - expand views
 - Investigate and setup a system for fileuploads
 - Add tests (also place bet that this is never happens ~sigh~)
