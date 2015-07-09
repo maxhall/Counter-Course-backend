@@ -17,7 +17,7 @@ class Units(db.Model):
     # Foreign Key column pointing to the Unit's Subjects Area
     subject = db.Column(db.Integer, db.ForeignKey('subjects.id'))
     # Relationship to the Notes that are intended for this Subject
-    notes = db.relationship('Notes', backref='Unit', lazy='dynamic')
+    notes = db.relationship('Notes', backref='Unit', lazy='joined')
 
 class Subjects(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -26,7 +26,7 @@ class Subjects(db.Model):
     review = db.Column(db.Text)
     published = db.Column(db.Boolean)
     # Relationship to the Units that comprise the Subject Area
-    units = db.relationship('Units', backref='Subject', lazy='dynamic')
+    units = db.relationship('Units', backref='Subject', lazy='joined')
 
 class Notes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
