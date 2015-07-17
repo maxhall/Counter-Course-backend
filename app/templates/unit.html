@@ -1,0 +1,55 @@
+{% extends "base.html" %}{% block content %}
+
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h4 class="subheader">{{ unit.subject }} - {{ unit.code }}</h4>
+	<h1>{{ unit.name }}</h1>
+	<h6>Runs in Semester {{ unit.semester }}, {{unit.year}}</h6>
+	<h6>Coordinated by {{ unit.coordinator }} | <a href="{{ unit.official_link }}">Official Information</a></h6>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="small-12 medium-8 columns">
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="panel">
+                    <h3>The Official Description</h3>
+		    <p>{{ unit.official_information }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="panel">
+                    <h3>Our Review</h3>
+		    <p>{{ unit.review }}</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <div class="panel">
+          <h3>Notes</h3>
+          <p>These notes were submitted by students. Show your appreciation by not plagiarising. That would be stupid.</p>
+          <ul>
+	    {% for note in notes %}
+	    <li><a href="{{ note.location }}">{{ note.title }}</a></li>
+	    {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+      
+    <div class="row">
+        <div class="small-12 columns" >
+          <div class="callout panel">
+            <h6>Did we get it wrong?</h6>
+            <a href="#" class="medium rounded button">Have your say!</a>
+          </div>
+        </div>
+    </div>
+
+{% endblock %}
+    

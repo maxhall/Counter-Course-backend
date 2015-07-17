@@ -1,10 +1,16 @@
 # The environment folder
 env/
 
-# The Static Folder
-static/
+# The node modules
+node_modules/
+
+# The node cache
+.sass-cache
+
+# Ignore the css, just commit the SCSS
+\css
 
 # Python executables
 *.pyc
 *.swp
-app/models.pyc
+app\models.pyc

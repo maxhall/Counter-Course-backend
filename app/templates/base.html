@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter Course</title>
+  <link href="{{ url_for('.static', filename='css/foundation.css') }}" rel="stylesheet">
+  <script src="{{ url_for('.static', filename='js/scripts.min.js') }}"></script>
+</head>
+<body>
+  <div class='row'>
+    <div class='small-12 columns'>  
+      <h1>Counter Course</h1>
+    </div>
+  </div>
+
+  {% block content %}{% endblock %}
+  
+  <div class='row'>
+    <div class='small-12 columns'>
+      <h6>Footer goes here</h6>
+    </div>
+  </div>
+</body>
+</html>

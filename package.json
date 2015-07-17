@@ -1,0 +1,23 @@
+{
+  "name": "Counter-Course-backend",
+  "version": "1.0.0",
+  "description": "Subject Reviews and Note Sharing for the good people of Sydney University",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxhall/Counter-Course-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxhall/Counter-Course-backend/issues"
+  },
+  "homepage": "https://github.com/maxhall/Counter-Course-backend",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-ruby-sass": "^1.0.5"
+  }
+}
